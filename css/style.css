@@ -790,3 +790,9 @@ table .filterDropdown{
 .scroller-x > *{
 	scroll-snap-align: start;
 }
+
+@media print {
+    body {
+        display: none;
+    }
+}

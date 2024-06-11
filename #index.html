@@ -28,21 +28,19 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="grid-wrapper">
-
-                 <!---------- logo ----------------->
-                 <div class="logo-wrapper">
-                    <button class="btn toggleSidebar">
-                        <i class="bi bi-list"></i>
-                    </button>
-                    <a href="index.html" class="logo">
-                        <img src="assets/logo.png" />
-                    </a>
-                </div>
+            <div class="flex-wrapper">
                 
                 <!---------- header ----------------->
                <header class="header">
-                   
+                    <!---------- logo ----------------->
+                    <div class="logo-wrapper">
+                        <button class="btn toggleSidebar">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <a href="index.html" class="logo">
+                            <img src="assets/logo.png" />
+                        </a>
+                    </div>
                     <nav class="mainmenu px-3 py-2">
                         <div class="filter-uk-navbar" >
                             <button class="uk-drop-close closeFilter" type="button" uk-close></button>
@@ -112,46 +110,43 @@
                         </div>
                     </nav> 
                 </header> 
-
-                <!---------- sidebar ----------------->
-                <aside class="sidebar" >
-                    <button class="uk-drop-close closeSidebar" type="button" uk-close></button>
-                    <a href="" class="notifiaction-icon">
-                        <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
-                    </a>
-                    <div class="offset-sidebar">
-                            <ul class="uk-nav uk-nav-default" uk-nav>
-                                <li class="item"><a href="overview.html">Overview</a></li>
-                                <li class="item uk-parent uk-open">
-                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
-                                    <ul class="uk-nav-sub">
-                                        <li class="sub-item"><a href="#">HISTORIK</a></li>
-                                        <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
-                                        <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
-                                        <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
-                                        <li class="sub-item"><a href="#">LISTOR</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item"><a href="#">Artists</a></li>
-                                <li class="item"><a href="#">Reports</a></li>
-                                <li class="item"><a href="#">Admin</a></li>
-                                <li class="item"><a href="#">Help</a></li>
-                            </ul>
-                    </div>
-
-                    <ul class="uk-nav uk-nav-default">
-                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
-                        <li class="item"><a href="#">User Profile</a></li>
-                        <li class="item"><a href="#">Change language</a></li>
-                        <li class="item"><a href="#">Log Out</a></li>
-                    </ul>
-                </aside>
                
                 <!---------- main ----------------->
                 <div class="main main-wrapper" >
-                     
-                        <!---------- table ----------------->
-                        <div class="uk-overflow-auto table-parent position-relative w-100">
+                     <!---------- sidebar ----------------->
+                        <aside class="sidebar" >
+                            <button class="uk-drop-close closeSidebar" type="button" uk-close></button>
+                            <a href="" class="notifiaction-icon">
+                                <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                            </a>
+                            <div class="offset-sidebar">
+                                    <ul class="uk-nav uk-nav-default" uk-nav>
+                                        <li class="item"><a href="overview.html">Overview</a></li>
+                                        <li class="item uk-parent uk-open">
+                                            <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                            <ul class="uk-nav-sub">
+                                                <li class="sub-item"><a href="#">HISTORIK</a></li>
+                                                <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
+                                                <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
+                                                <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
+                                                <li class="sub-item"><a href="#">LISTOR</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item"><a href="#">Artists</a></li>
+                                        <li class="item"><a href="#">Reports</a></li>
+                                        <li class="item"><a href="#">Admin</a></li>
+                                        <li class="item"><a href="#">Help</a></li>
+                                    </ul>
+                            </div>
+
+                            <ul class="uk-nav uk-nav-default">
+                                <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                                <li class="item"><a href="#">User Profile</a></li>
+                                <li class="item"><a href="#">Change language</a></li>
+                                <li class="item"><a href="#">Log Out</a></li>
+                            </ul>
+                        </aside>
+                        <div class="table-parent position-relative w-100">
                             <table class="uk-table uk-table-striped my-table">
                             <thead>
                                 <tr>
@@ -733,5 +728,7 @@
         <!--Common script -->
         <script src="js/script.js"></script>
     
+
+
     </body>
 </html>
