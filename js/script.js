@@ -4,23 +4,21 @@ $('.my-table-model').hide();
 $('.tr-click-model').click(function(){
   $('.my-table-model').toggle();
 });
+
 $('.closeDialog').click(function(){
   $('.my-table-model').hide();
 });
 
 
-$('.btn-filterhead').click(function(){
-  $('body').toggleClass('open-Filter-sidebar');
-});
-$('.closeFilter').click(function(){
-  $('body').toggleClass('open-Filter-sidebar');
-});
 
 $('.toggleSidebar').click(function(){
-  $('body').toggleClass('open-main-sidebar');
+  $('.sidebar').toggleClass('show');
 });
-$('.closeSidebar').click(function(){
-  $('body').toggleClass('open-main-sidebar');
+$('.btn-filterhead').click(function(){
+  $('.filter-uk-navbar').toggleClass('show');
+});
+$('.close-floating').click(function(){
+  $(this).parent().toggleClass('show');
 });
 
 

@@ -23,15 +23,7 @@
         padding-inline: 15px;
     }
     .filter-uk-navbar{
-        position: fixed;
-        height: 100dvh;
-        right: 0;
-        top: 0;
-        background: white;
-        max-width: 300px;
-        padding: 20px;
-        z-index:3;
-       
+           
         .uk-navbar-nav{
                 justify-content: flex-start;
                 flex-direction: column;
@@ -40,27 +32,82 @@
         }
        
     }
-    .open-main-sidebar{
+    /* .open-main-sidebar{
         .sidebar{
             display: flex;
         }
-    }
-    .sidebar{
-        display: none;
+    } */
+    
+    .floating-sidebar{
+        --_sidebar-width: 300px;
+        visibility: hidden;
         position: fixed;
         height: 100dvh;
+        opacity: 0;
         left: 0;
         top: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
         background: white;
-        max-width: 300px;
+        max-width:var(--_sidebar-width);
         padding: 20px;
         z-index:3;
-        .closeSidebar{
-            position: absolute;
-            left: 15px;
-            top: 15px;
-        }
+        transform: translateX(-110%);
+        -webkit-transform: translateX(-110%);
+        -moz-transform: translateX(-110%);
+        -ms-transform: translateX(-110%);
+        -o-transform: translateX(-110%);
+        transition: all 0.35s ease-in-out;
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -ms-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
     }
+    .floating-sidebar .close-floating{
+        display: flex;
+        font-size:30px;
+        width:30px;
+        height:30px;
+        border-radius:30px;
+        align-items: center;
+        justify-content: center;
+        border:none;
+        box-shadow: none;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        -webkit-border-radius:30px;
+        -moz-border-radius:30px;
+        -ms-border-radius:30px;
+        -o-border-radius:30px;
+    }
+    .floating-sidebar.right .close-floating{
+        right: 15px ;
+        left: auto !important;
+    }
+    .floating-sidebar.right{
+        left: auto;
+        right:0;
+        transform: translateX(110%);
+        -webkit-transform: translateX(110%);
+        -moz-transform: translateX(110%);
+        -ms-transform: translateX(110%);
+        -o-transform: translateX(110%);
+    }
+    .floating-sidebar.show{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+   
     .toggleSidebar{
         font-size: 30px !important;
     }
@@ -85,11 +132,7 @@
         display: none !important;
     }
     .filter-uk-navbar{
-        display: flex;
-        overflow-x: auto;
-        .closeFilter{
-            display:none !important;
-        }
+        display: grid;
     }
     .sidebar{
         display: flex;
@@ -101,31 +144,30 @@
         display: none !important;
     }
     
-    
     .main-wrapper{
         display: grid !important;
+        gap: var(--grid-gap);
         /* grid-template-columns: var(--sidepanel-width) auto; */
-        .sidebar{
-            grid-column: 1 / 2;
-            grid-row: 1 / span 2;
-        }
-        .table-parent {
-            grid-column: 2 / span 2;
-            grid-row: 1 / 1;
-        
-        }
-        .main-inner{
-            grid-column: 1 / span 2;
-            grid-row: 1 / 1;
-        }
-        .paginationWrapper {
-            grid-column: 2 /  span 2;
-            grid-row: 2 / 2;
-        }
     }
 }
 @media (min-width: 1600px) {
     .flex-wrapper,.grid-wrapper{
         max-width: 1920px;
+    }
+}
+@media (max-width: 768px) {
+    .chartDiv {
+        canvas {
+            width: 300px;
+        }
+    }
+    .chartWrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .chartLabel-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }

@@ -42,16 +42,17 @@
                 
                 <!---------- header ----------------->
                <header class="header">
-                   
                     <nav class="mainmenu px-3 py-2">
-                        <div class="filter-uk-navbar" >
-                            <button class="uk-drop-close closeFilter" type="button" uk-close></button>
-                            <ul class="uk-navbar-nav scroller-x">
+                        <div class="filter-uk-navbar floating-sidebar right" >
+                            <button class="close-floating" type="button">
+                                <i class="bi bi-x icon"></i>
+                            </button>
+                            <ul class="uk-navbar-nav scroller-x ">
                                 <li class="uk-active">
                                     <a href="#" class="navlink">
                                         <img src="assets/icons/gallery 1.png" class="img-fluid" />
                                     View</a>
-                                    <div class="uk-navbar-dropdown filterDropdown" uk-drop="pos:bottom-left;animation: uk-animation-slide-top-small; animate-out: true">
+                                    <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="#">TILES VIEW</a></li>
                                             <li><a href="#">LIST VIEW</a></li>
@@ -70,7 +71,7 @@
                                     <a href="#" class="navlink">
                                         <img src="assets/icons/setting 1.png" class="img-fluid" />
                                         Mass Update</a>
-                                        <div class="uk-navbar-dropdown filterDropdown" uk-drop="pos:bottom-left;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                                 <li><a href="#">LOAN</a></li>
                                                 <li><a href="#">INVENTORY</a></li>
@@ -91,7 +92,7 @@
                                     <a href="#" class="navlink">
                                     <img src="assets/icons/red-flag 1.png" class="img-fluid" />
                                         Flagged Works</a>
-                                    <div class="uk-navbar-dropdown filterDropdown" uk-drop="pos:bottom-left;animation: uk-animation-slide-top-small; animate-out: true">
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="#">FIND FLAGGED WORKS</a></li>
                                             <li><a href="#">DE-SELECT ALL</a></li>
@@ -114,8 +115,10 @@
                 </header> 
 
                 <!---------- sidebar ----------------->
-                <aside class="sidebar" >
-                    <button class="uk-drop-close closeSidebar" type="button" uk-close></button>
+                <aside class="sidebar floating-sidebar" >
+                    <button class="close-floating" type="button">
+                        <i class="bi bi-x icon"></i>
+                    </button>
                     <a href="" class="notifiaction-icon">
                         <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
                     </a>
@@ -125,7 +128,7 @@
                                 <li class="item uk-parent uk-open">
                                     <a class="uk-active" href="artwork_tileview.html">Artworks</a>
                                     <ul class="uk-nav-sub">
-                                        <li class="sub-item"><a href="#">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="artwork_tileview.html">HISTORIK</a></li>
                                         <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
                                         <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
                                         <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>

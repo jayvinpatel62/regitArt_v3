@@ -62,7 +62,6 @@ body{
     }
     .main-wrapper{
         display: flex;
-        
         gap: var(--grid-gap);
     }
 }
@@ -764,16 +763,11 @@ table .filterDropdown{
 .btn-filterhead{
     display: inline-flex;
 }
-.filter-uk-navbar{
+
+
+.close-floating{
     display: none;
 }
-.open-Filter-sidebar{
-    .filter-uk-navbar{
-        display: flex;
-    }
-}
-
-
 
 .btn-white{
     background: white !important;
@@ -783,12 +777,13 @@ table .filterDropdown{
 
 .scroller-x{
 	overflow-x: auto;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 30px;
+    scroll-padding-inline: 20px;
 }
 .scroller-x > *{
 	scroll-snap-align: start;
+    padding-inline: 2px;
 }
 
 @media print {
