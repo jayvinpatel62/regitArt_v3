@@ -791,3 +791,54 @@ table .filterDropdown{
         display: none;
     }
 }
+
+.modal-img-slider{
+
+   .image-div{
+        width: 100%;
+        max-width:461px;
+        height: 346px;
+        margin: auto;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+   }
+   .content{
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 40px;
+   }
+}
+
+.uk-modal-dialog.modal-dialog-cstm{
+    max-width: 812px !important;
+    width: 100% !important;
+    box-shadow: 4px 4px 32px 0px #00000029;
+    border-radius: 12px !important;
+
+    .uk-position-center-left-out {
+        right: 95%;
+    }
+    .uk-position-center-right-out {
+        left: 95%;
+    }
+    .uk-slidenav{
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        svg{
+            width: 10px;
+        }
+    }
+}
+#modal-slider.uk-modal{
+    background: none;
+}
