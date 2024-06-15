@@ -129,8 +129,29 @@
     .hero-section {
         grid-template-columns: 1fr;
     }
+    .mainmenu{
+        .uk-navbar-nav{
+            .navlink{
+                justify-content: flex-start;
+            }
+        }
+    }
+    .uk-navbar-dropdown.filterDropdown{
+        max-width: 100%;
+        top: 0 !important;
+        left: 10px;
+        position: relative;
+        box-shadow: none;
+        border: none;
+        &::before{
+            display: none;
+        }
+    }
 }
 @media (min-width: 1200px) {
+    body{
+        min-width:1900px;
+    }
     .btn-filterhead{
         display: none !important;
     }
@@ -159,9 +180,9 @@
     }
 }
 @media (min-width: 1600px) {
-    .flex-wrapper,.grid-wrapper{
+    /* .flex-wrapper,.grid-wrapper{
         max-width: 1920px;
-    }
+    } */
 }
 @media (max-width: 768px) {
     .chartDiv {

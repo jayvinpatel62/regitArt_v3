@@ -33,6 +33,7 @@ body{
     /* min-height: calc(100vh - 54px); */
     /* padding: var(--grid-gap); */
     /* padding-bottom: 0; */
+    margin: auto;
 }
 
 
@@ -73,6 +74,7 @@ body{
     }
 }
 .grid-wrapper{
+    margin: auto;
     display: grid;
     grid-template-columns: var(--sidepanel-width) 1fr;
     grid-template-rows: 80px 1fr;
@@ -691,8 +693,11 @@ table .filterDropdown{
 }
 .chartDiv{
    
-    canvas{
+    .chart-canvas,canvas{
         width: 312px;
+        height:312px;
+        max-width:312px;
+        max-height:312px;
     }
     
 }
