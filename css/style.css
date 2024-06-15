@@ -17,6 +17,8 @@
     --main-height:calc(100dvh - 230px);
     --bs-btn-bg: var(--primary-color) !important;
     --bs-primary:var(--primary-color);
+    --green-color: #9FB699;
+    --green-hover: #768f70;
     /* --bs-btn-border-color */
 }
 body{
@@ -630,9 +632,18 @@ table .filterDropdown{
     .btn{
         min-width: 266px;
         min-height: 44px;
+        font-family: Helvetica;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.1px;
+        letter-spacing: 0.04em;
     }
 }
 
+.link.primary{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 
 .bg-white-box{
     background: white;
@@ -642,19 +653,34 @@ table .filterDropdown{
 
 .btn{
     padding: 14px 53px;
-    border-radius: 4px;
+    border-radius: 4px !important;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    &:hover{
+        text-decoration: none;
+    }
 }
 .btn-primary{
-    font-family: Helvetica;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.04em;
+    
     --color:var(--primary-color);
     --hover-color:var(--primary-hover);
     --bs-btn-bg: var(--color) !important;
     --bs-btn-border-color:var(--color) !important;
     --bs-btn-hover-bg:var(--hover-color) !important;
     --bs-btn-hover-border-color:var(--hover-color) !important;
+}
+.btn-green{
+    
+    --color:var(--green-color);
+    --hover-color:var(--green-hover);
+    --bs-btn-bg: var(--color) !important;
+    --bs-btn-border-color:var(--color) !important;
+    --bs-btn-hover-bg:var(--hover-color) !important;
+    --bs-btn-hover-border-color:var(--hover-color) !important;
+    color: white !important;
 }
 
 .chartWrapper{
@@ -742,6 +768,19 @@ table .filterDropdown{
     box-shadow: 4px 4px 32px 0px #00000029;
     border-radius: 12px !important;
 }
+.custom-dialog {
+    box-shadow: 4px 4px 32px 0px #00000029;
+    border-radius: 12px !important;
+}
+.uk-modal-dialog.dialog-login{
+    width: 100%;
+    max-width: 520px !important;
+}
+.uk-modal-dialog.dialog-signup{
+    max-width: 700px !important;
+    width: 100%;
+}
+
 .form-inline{
     display: flex;
     flex-wrap: wrap;
@@ -850,12 +889,12 @@ table .filterDropdown{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 3;
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 53px;
+    padding: 20px 53px;
 }
 .brand-logo{
     width: 184px;
@@ -870,6 +909,7 @@ table .filterDropdown{
         justify-content: center;
         text-decoration: none;
 }
+
 .hero-section{
     position: relative;
     background-image: url('../assets/header_bg.jpeg');
@@ -901,6 +941,7 @@ table .filterDropdown{
         .text-big{
             font-family: Josefin Sans;
             font-size: 72px;
+            line-height: 80px;
             font-weight: 600;
             color: white;
         }
@@ -910,5 +951,106 @@ table .filterDropdown{
             font-weight: 400;
         }
         
+    }
+}
+.relative{
+    position: relative;
+}
+.btn-login{
+    font-family: Josefin Sans;
+    font-size: 18px;
+    font-weight: 500 !important;
+    line-height: 18px;
+
+}
+.btn-google{
+    position: relative;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400 !important;
+    letter-spacing: 0.25px;
+    text-align: center;
+    border: 1px solid #CACACA !important;
+    .icon-g{
+        position: absolute;
+        left:10px ;
+
+    }
+}
+.text-or{
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+
+}
+
+.remember-checkbox{
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.8px;
+    color: #383334A6;
+
+}
+
+.right-funcs{
+    display: flex;
+    align-items: center;
+    gap:36px;
+}
+.btn-signUp{
+    font-size: 20px !important;
+    font-weight: 400 !important;;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.lang-dropdown{
+    color: #1D1D1B;
+    
+    a{
+        font-family: Helvetica;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #1D1D1B;
+        text-decoration: none !important;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+    .lang-flag{
+        width:30px;
+    }
+    .uk-dropdown-nav{
+        a{
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+.register-text{
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #A4A4A4;
+}
+.text-primary,.primary-text {
+    color: var(--primary-color) !important;
+}
+
+.sign-up-form{
+    .label-text{
+        color: #A4A4A4;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.4px;
+
     }
 }
