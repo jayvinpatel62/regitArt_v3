@@ -129,10 +129,27 @@
     .hero-section {
         grid-template-columns: 1fr;
     }
+    .logo-wrapper {
+        width: 200px;
+    }
     .mainmenu{
+        gap: 20px;
+        display: flex;
+        .navbar-search {
+            width: 40px;
+            height: 40px;
+        }
         .uk-navbar-nav{
             .navlink{
                 justify-content: flex-start;
+                font-size: 14px;
+            }
+        }
+    }
+    .sidebar {
+        & .uk-nav {
+            a {
+                font-size: 14px;
             }
         }
     }
@@ -185,6 +202,10 @@
     } */
 }
 @media (max-width: 768px) {
+    .grid-wrapper{
+        grid-template-columns: 176px 1fr;
+    }
+    
     .chartDiv {
         canvas {
             width: 300px;
